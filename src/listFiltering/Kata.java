@@ -6,8 +6,14 @@ import java.util.stream.Stream;
 public class Kata {
 
     public static List<Object> filterList(final List<Object> list) {
+//        // My Solution
+//        return list.stream()
+//                .filter(item -> item.getClass().getSimpleName().equals("Integer"))
+//                .toList();
+
+        // Better Solution
         return list.stream()
-                .filter(item -> item.getClass().getSimpleName().equals("Integer"))
+                .filter(item -> item instanceof Integer)
                 .toList();
     }
 
